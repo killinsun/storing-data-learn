@@ -1,0 +1,13 @@
+version: '3.1'
+services:
+  db:
+    image: mysql@sha256:68b207d01891915410db3b5bc1f69963e3dc8f23813fd01e61e6d7e7e3a46680
+    restart: always
+    ports: 
+      - "0.0.0.0:3306:3306"
+    environment:
+      MYSQL_DATABASE: gwp
+      MYSQL_USER: test
+      MYSQL_PASSWORD: test
+      MYSQL_ROOT_PASSWORD: test
+    command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci --default-time-zone=Asia/Tokyo
